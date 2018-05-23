@@ -1,0 +1,17 @@
+version: '2.0'
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    volumes:
+      - .:/produciton
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: "3000"
+      PGHOST: "db"
+      PGUSER: "postgres"
+      PGDBNAME: "produciton"
+    depends_on:
+      - db
