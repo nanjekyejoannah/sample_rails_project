@@ -1,5 +1,5 @@
 # Base image
-FROM ruby:2.5.1
+FROM ruby:2.5.0
 
 #RUN mkdir /myapp
 
